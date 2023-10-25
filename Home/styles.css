@@ -1,0 +1,364 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+    background-color: #fff;
+}
+
+body {
+
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+div {
+    display: block;
+}
+
+/* ------------------- Header ---------------------- */
+
+.header {
+    background-color: #DBE2EF;
+    padding: .5rem 4%;
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .navbar-wrap {
+    padding: 0.1rem 5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .navbar-wrap img {
+    height: 100%;
+}
+
+.header .navbar-wrap .search-bar {
+    height: 0.3rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.5rem 0rem;
+    background-color: #fff;
+}
+
+.header .navbar-wrap .search-bar input {
+    width: 100%;
+    margin-left: 1rem;
+    background: none;
+    font-size: 1.2rem;
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+
+.header .navbar-wrap .search-bar button {
+    font-size: 1.2rem;
+    height: 3rem;
+    width: 7.5rem;
+    padding: 1rem 0rem;
+    margin-left: 10px;
+    color: #fff;
+    cursor: pointer;
+    background: #F08A5D;
+    box-shadow: none;
+    border: none;
+    border-radius: 0px 15px 15px 0px;
+}
+
+.header .navbar-wrap .icon {
+    display: flex;
+    align-items: 'center';
+}
+
+
+.header a i {
+    font-size: 3rem;
+    color: #F08A5D;
+    line-height: 2.4rem;
+    text-align: center;
+    margin-left: 0.8rem;
+    cursor: pointer;
+}
+
+.header sup {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 10%;
+    color: #fff;
+    line-height: 15px;
+    margin-left: -1rem;
+    text-align: center;
+}
+
+.header .navbar-wrap .navbar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.header .navbar-wrap .navbar a {
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    margin: 1rem;
+}
+
+.header .navbar-wrap .navbar a:hover {
+    color: #F08A5D;
+    border-bottom: 1px solid #F08A5D;
+}
+
+/* --------------------- Banner --------------------------- */
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    margin-bottom: 3rem;
+}
+
+.slider-container .slideBox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .5s;
+}
+
+.slider-container .slideBox.active {
+    opacity: 1;
+}
+
+.slider-container .imgBox img {
+    width: 100%;
+    height: 100vh;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+}
+
+.controls button {
+    position: relative;
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: transparent;
+    color: #F08A5D;
+    border: .5px solid #F08A5D;
+}
+
+.controls button:hover {
+    background: #F08A5D;
+    color: #fff;
+}
+
+/* ------------------- SP ----------------------*/
+
+.listItem-container {
+    position: relative;
+    /* border: 1px solid #aaa; */
+    box-shadow: 5px 5px 10px #aaa;
+    overflow: hidden;
+    padding: 2rem;
+    margin: 3rem;
+}
+
+.listItem-container h2 {
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding: 1rem 5rem;
+}
+
+.listItem-container ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    gap: 2.3rem;
+}
+
+.bestSell ul {
+    transition: 0ms;
+}
+
+.listItem-container ul a {
+    text-decoration: none;
+}
+
+.listItem-container ul li:hover {
+    box-shadow: 0px 5px 5px 5px #aaa;
+    /* background-color: #aaa; */
+}
+
+.listItem-container ul .Item-container {
+    position: relative;
+    margin: 10px;
+}
+
+.listItem-container ul .Item-container .nameItem {
+    font-size: 1.8rem;
+    color: #000;
+    padding: 1rem 0rem;
+}
+
+.listItem-container ul .Item-container .priceItem {
+    font-size: 1.8rem;
+    color: red;
+}
+
+.listItem-container ul .controls {
+    margin: 10px;
+}
+
+.new li {
+    transition: 0;
+}
+
+/* ------------------------ Footer -----------------------------*/
+
+
+footer {
+    background-color: #3F72AF;
+    padding: 2rem 4.5rem;
+}
+
+footer .content {
+    display: flex;
+}
+
+footer .content .box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+}
+
+footer .content .box.col2 {
+    flex: 2;
+}
+
+footer .content .box h3 {
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    margin-bottom: .5rem;
+    color: #fff;
+}
+
+footer .content .box a {
+    font-size: 1.2rem;
+    color: #fff;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+footer .content .box a:hover {
+    color: #F08A5D;
+}
+
+footer .content .box p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+footer .content .box .icons {
+    margin-top: 2rem;
+}
+
+footer .content .box .icons i {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #fff;
+    margin: 0rem 1rem;
+}
+
+footer .content .box .get-information {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 0.3rem;
+    border-radius: 15px;
+    padding: 1.5rem 0rem;
+    margin-top: 1rem;
+    background: #fff;
+    width: calc(60% - 10px);
+}
+
+footer .content .box .get-information input {
+    width: 100%;
+    margin-left: 1rem;
+    background: none;
+    font-size: 1.2rem;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    line-height: 1.5rem;
+}
+
+footer .content .box .get-information button {
+    font-size: 1.2rem;
+    height: 3rem;
+    width: 7.5rem;
+    padding: 1rem 0rem;
+    margin-left: 10px;
+    color: #fff;
+    cursor: pointer;
+    background: #F08A5D;
+    box-shadow: none;
+    border: none;
+    border-radius: 0px 15px 15px 0px;
+} 
+
+footer .bottom {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    padding: 1.8rem;
+    border-top: 1px solid #C3C3C3;
+    line-height: 2rem;
+}
+
+footer .bottom p{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: #fff;
+}
