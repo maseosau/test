@@ -1,126 +1,104 @@
-*, ::after, ::before {
-    box-sizing: border-box;
+.header {
+    /* Thuộc tính khác cho header */
+    padding-bottom: 20px;
+    /* Để tạo khoảng cách giữa header và sidebar */
 }
 
-* {
+.footer {
+    /* Thuộc tính khác cho footer */
+    padding-top: 20px;
+    /* Để tạo khoảng cách giữa footer và sidebar */
+}
+
+.user-profile {
+    display: flex;
+    /* Sử dụng flexbox */
+}
+
+/* Thiết lập kiểu cho phần sidebar */
+.sidebar {
+    width: 30%;
+    background-color: #f2f2f2;
+    padding: 40px;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+    font-size: 30px;
+    line-height: 1.5;
+    margin-left: 10px;
+    margin-top: 80px;
+    /* Thêm margin-top để cách header */
+    margin-bottom: 40px;
+    /* Thêm margin-bottom để cách footer */
+}
+
+/* Thiết lập kiểu cho danh sách liên kết trong sidebar */
+.sidebar ul {
+    list-style-type: none;
+    /* Loại bỏ dấu chấm trước mỗi dòng liên kết */
     padding: 0;
-    margin: 0;
+    text-align: left;
+    /* Cân chỉnh văn bản liên kết*/
 }
 
-html {
-    font-size: 10px;
-    background-color: #fff;
+/* Thiết lập kiểu cho từng dòng liên kết trong sidebar */
+.sidebar li {
+    margin: 10px 0;
+    /* Khoảng cách giữa các dòng liên kết */
 }
 
-body {
-    
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
+/* Màu và kiểu chữ cho các dòng liên kết */
+.sidebar a {
+    text-decoration: none;
+    /* Loại bỏ gạch chân mặc định của liên kết */
+    color: #333;
+    /* Màu chữ */
+    font-weight: bold;
+    /* Kiểu chữ in đậm */
+    display: block;
+    /* Hiển thị liên kết như một khối */
+    padding: 0;
+    /* Loại bỏ padding */
+}
+
+/* Đổi màu liên kết khi hover chuột lên */
+.sidebar a:hover {
+    color: #ff5733;
+}
+
+/* Thiết lập kiểu cho phần nội dung (content) */
+.content_account {
+    width: 70%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+    margin-left: 40px;
+    /* Đặt lại margin-left thành 0 để content nằm bên cạnh sidebar */
+    margin-top: 80px;
+    /* Thêm margin-top để cách header */
+    margin-bottom: 40px;
+    /* Thêm margin-bottom để cách footer */
+    line-height: 1.75;
+}
+
+/* Thiết lập kiểu cho thông tin cá nhân */
+.profile-info {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-}
-div {
-    display: block;
+    font-size: 30px;
+    /* Đặt cỡ chữ cho thông tin cá nhân */
 }
 
-.header {
-    background-color: #DBE2EF;
-    padding: .5rem 4%;
-    box-shadow: 0px 5px 10px 0px #aaa;
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-}
-.header .navbar-wrap {
-    padding: 0.1rem 5rem;
-    position: relative;
+/* Thiết lập khoảng cách giữa các mục thông tin */
+.info-item {
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
-.header .navbar-wrap img {
-    height: 100%;
+
+/* Điều chỉnh cỡ chữ của các mục thông tin */
+.info-item span {
+    flex-basis: 40%;
+    font-size: 30px;
+    font-weight: bold; /* In đậm */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.header .navbar-wrap .search-bar {
-    height: 0.3rem;
-    border-radius: 15px;
-    display: flex;
-    align-items:center;
-    gap: 0.5rem;
-    padding: 1.5rem 0rem;
-    background-color: #fff;
-}
-
-.header .navbar-wrap .search-bar input {
-    width: 100%;
-    margin-left: 1rem;
-    background: none;
-    font-size: 1.2rem;
-    box-shadow: none;
-    border: none;
-    outline: none;
-}
-
-.header .navbar-wrap .search-bar button {
-    font-size: 1.2rem;
-    height: 3rem;
-    width: 5rem;
-    padding: 1rem 0rem;
-    margin-left: 10px;
-    color: #fff;
-    cursor: pointer;
-    background: #F08A5D;
-    box-shadow: none;
-    border: none;
-    border-radius: 0px 15px 15px 0px;
-}
-
-.header .navbar-wrap .icon {
-    display: flex;
-    align-items: 'center';
-}
-
-
-.header a i {
-    font-size: 3rem;
-    color:#F08A5D;
-    line-height: 2.4rem;
-    text-align: center;
-    margin-left: 0.8rem;
-    cursor: pointer;
-}
-
-.header sup {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: red;
-    position: absolute;
-    top: 10%;
-    color: #fff;
-    line-height: 15px;
-    margin-left: -1rem;
-    text-align: center;
-}
-.header .navbar-wrap .navbar{
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
-.header .navbar-wrap .navbar a{
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: black;
-    margin: 1rem;
-}
-
-.header .navbar-wrap .navbar a:hover {
-    color: #F08A5D;
-    border-bottom: 1px solid #F08A5D;
-}
