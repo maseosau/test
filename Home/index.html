@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="icon" type="image/x-icon" href="../Global/logo2.png">
-    <link rel="stylesheet" href="../Global/globalStyle.css">
-    <link rel="stylesheet" href="../Global/header.css">
-    <link rel="stylesheet" href="../Global/footer.css">
+    <link rel="stylesheet" href="../Global/styles/globalStyle.css">
+    <link rel="stylesheet" href="../Global/styles/header.css">
+    <link rel="stylesheet" href="../Global/styles/footer.css">
     <link rel="stylesheet" href="styles.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -24,11 +24,13 @@
                 <a href="#">Nữ</a>
                 <a href="#">Trẻ em</a>
             </nav>
-            <form action="" method="get" class="search-bar">
+            <form action="" method="post" class="search-bar">
                 <input type="text" name="search_product" placeholder="Search..." maxlength="100">
                 <button type="submit" class="fa fa-search" id="Search_product_button"></button>
             </form>
             <div class="icon">
+                <div class="fa fa-list" id="menu-btn"></div>
+                <div class="fa fa-search" id="search-btn"></div>
                 <a href="#"><i class="fa fa-user"></i></a>
                 <a href="#"><i class="fa fa-shopping-cart"></i><sup>0</sup></a>
             </div>
@@ -297,6 +299,7 @@
     </footer>
 
     <script src="scripts.js"></script>
+    <script src="../Global/scripts/header.js"></script>
 </body>
 
 </html>
