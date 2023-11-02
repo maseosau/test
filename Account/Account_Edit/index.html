@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account</title>
+    <title>Accont/EditProfile</title>
     <link rel="icon" type="image/x-icon" href="logo2.png">
-    <link rel="stylesheet" href="../Global/styles/globalStyle.css">
-    <link rel="stylesheet" href="../Global/styles/header.css">
-    <link rel="stylesheet" href="../Global/styles/footer.css">
+    <link rel="stylesheet" href="../../Global/styles/globalStyle.css">
+    <link rel="stylesheet" href="../../Global/styles/header.css">
+    <link rel="stylesheet" href="../../Global/styles/footer.css">
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,13 +25,11 @@
                 <a href="#">Nữ</a>
                 <a href="#">Trẻ em</a>
             </nav>
-            <form action="" method="post" class="search-bar">
+            <form action="" method="get" class="search-bar">
                 <input type="text" name="search_product" placeholder="Search..." maxlength="100">
                 <button type="submit" class="fa fa-search" id="Search_product_button"></button>
             </form>
             <div class="icon">
-                <div class="fa fa-list" id="menu-btn"></div>
-                <div class="fa fa-search" id="search-btn"></div>
                 <a href="#"><i class="fa fa-user"></i></a>
                 <a href="#"><i class="fa fa-shopping-cart"></i><sup>0</sup></a>
             </div>
@@ -39,7 +37,7 @@
     </header>
 
     <nav class="top-nav">
-        <a href="../Home/index.html" id="home-link">Trang chủ / </a>
+        <a href="../../Home/index.html" id="home-link">Trang chủ / </a>
         <a href="#" style="color: #ff5733;">Tài khoản</a>
     </nav>
 
@@ -47,30 +45,41 @@
     <div class="user-profile">
         <div class="sidebar">
             <ul>
-                <li><a href="./index.html" style="color: #ff5733;">Hồ sơ cá nhân</a></li>
-                <li><a href="../Account/Account_MyOrder/index.html">Đơn hàng của tôi</a></li>
-                <li><a href="../Account/Account_history/index.html">Lịch sử mua hàng</a></li>
-                <li><a href="../Account/Account_Edit/index.html">Chỉnh sửa hồ sơ</a></li>
+                <li><a href="../index.html">Hồ sơ cá nhân</a></li>
+                <li><a href="../Account_MyOrder/index.html">Đơn hàng của tôi</a></li>
+                <li><a href="../Account_history/index.html">Lịch sử mua hàng</a></li>
+                <li><a href="#" style="color: #ff5733;">Chỉnh sửa hồ sơ</a></li>
             </ul>
         </div>
 
         <div class="content_account">
-            <!-- Nội dung của trang Hồ sơ cá nhân sẽ được thêm ở đây -->
-            <div class="profile-info">
-                <div class="info-item">
-                    <span>Họ và tên:</span>
-                    <span>Quang</span>
+            <h2>Chỉnh sửa hồ sơ cá nhân</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="username">Tên người dùng:</label>
+                    <input type="text" id="username" name="username" value="Tên của tôi" required>
                 </div>
-                <div class="info-item">
-                    <span>Email:</span>
-                    <span>21522512</span>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="example@example.com" required>
                 </div>
-                <div class="info-item">
-                    <span>Số điện thoại:</span>
-                    <span>123</span>
+        
+                <div class="form-group">
+                    <label for="password">Mật khẩu:</label>
+                    <input type="password" id="password" name="password" required>
                 </div>
-            </div>
+        
+                <div class="form-group">
+                    <label for="confirm_password">Xác nhận mật khẩu:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                </div>
+        
+                <button type="submit">Lưu thay đổi</button>
+            </form>
         </div>
+        
+
     </div>
     <footer>
         <div class="content">
@@ -114,8 +123,6 @@
             <p> &copy bản quyền thuộc về nhóm 5</p>
         </div>
     </footer>
-
-    <script src="../Global/scripts/header.js"></script>
 
 </body>
 

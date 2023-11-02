@@ -1,21 +1,22 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 .header {
-    /* Thuộc tính khác cho header */
     padding-bottom: 20px;
-    /* Để tạo khoảng cách giữa header và sidebar */
 }
 
 .footer {
-    /* Thuộc tính khác cho footer */
     padding-top: 20px;
-    /* Để tạo khoảng cách giữa footer và sidebar */
 }
 
 .user-profile {
     display: flex;
-    /* Sử dụng flexbox */
 }
 
-/* Thiết lập kiểu cho phần sidebar */
 .sidebar {
     width: 30%;
     background-color: #f2f2f2;
@@ -24,9 +25,10 @@
     font-size: 30px;
     line-height: 1.5;
     margin-left: 10px;
+    margin-right: 40px;
     margin-top: 80px;
     /* Thêm margin-top để cách header */
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     /* Thêm margin-bottom để cách footer */
 }
 
@@ -45,6 +47,7 @@
     /* Khoảng cách giữa các dòng liên kết */
 }
 
+
 /* Màu và kiểu chữ cho các dòng liên kết */
 .sidebar a {
     text-decoration: none;
@@ -59,51 +62,93 @@
     /* Loại bỏ padding */
 }
 
+
 /* Đổi màu liên kết khi hover chuột lên */
 .sidebar a:hover {
     color: #ff5733;
 }
-
-/* Thiết lập kiểu cho phần nội dung (content) */
 .content_account {
     width: 70%;
+    height: auto;
     background-color: #f2f2f2;
     padding: 20px;
     box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
-    margin-left: 40px;
-    /* Đặt lại margin-left thành 0 để content nằm bên cạnh sidebar */
+    margin-left: 0;
     margin-top: 80px;
-    /* Thêm margin-top để cách header */
-    margin-bottom: 40px;
-    /* Thêm margin-bottom để cách footer */
+    margin-bottom: 80px;
     line-height: 1.75;
 }
 
-/* Thiết lập kiểu cho thông tin cá nhân */
-.profile-info {
+.order-details {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+}
+
+.product-info {
+    text-align: center;
+}
+
+.additional-info {
+    text-align: right;
+}
+
+.additional-info p {
+    margin: 0;
+}
+
+.order-info {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.order {
     display: flex;
     flex-direction: column;
-    font-size: 30px;
-    /* Đặt cỡ chữ cho thông tin cá nhân */
+    align-items: flex-start;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #F8F8FF;
 }
 
-/* Thiết lập khoảng cách giữa các mục thông tin */
-.info-item {
+/* Thêm kiểu cho container của màu sắc */
+.color-container {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
 }
 
-/* Điều chỉnh cỡ chữ của các mục thông tin */
-.info-item span {
-    flex-basis: 40%;
-    font-size: 30px;
-    font-weight: bold; /* In đậm */
-    margin-top: 20px;
-    margin-bottom: 20px;
+/* Thêm kiểu cho ô màu sắc sản phẩm */
+.product-color {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+}
+
+/* Điều chỉnh kích thước ảnh sản phẩm */
+.product-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+/* Điều chỉnh kích thước nút "Hủy đơn" */
+#cancel_button {
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    padding: 5px 20px; /* Tăng padding để tăng kích thước */
+    cursor: pointer;
+    font-size: 16px; /* Điều chỉnh kích thước chữ */
+    margin-right: 82px; /* Dịch sang bên trái 5px */
 }
 
 
-/* Thiết lập kiểu cho top navigation (đường link "Trang chủ" và "Tài khoản") */
+#cancel_button:hover {
+    background-color: #e64e2e;
+}
+
+
 .top-nav {
     font-size: 20px;
     margin-top: 20px;
@@ -119,4 +164,13 @@
     text-decoration: none;
     margin-right: 2px;
     font-weight: bold;
+}
+
+.footer .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom {
+    text-align: center;
 }
