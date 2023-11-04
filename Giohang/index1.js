@@ -276,9 +276,17 @@ function updatePrice(input) {
       total1=total1+numericValue ;
       console.log(total1);
     }
+    // Lưu giá trị total1 vào Local Storage
+    localStorage.setItem('cartTotal', total1);
+  
 
     // Display the total in the "thanh toan" element
     var totalElement = document.querySelector(".thanhtoan");
+    console.log(totalElement)
+    totalElement.innerHTML =  total1.toLocaleString('de-DE')+ " VND";
+
+
+    var totalElement = document.querySelector(".thanhtoan_TT");
     console.log(totalElement)
     totalElement.innerHTML =  total1.toLocaleString('de-DE')+ " VND";
   }
@@ -287,7 +295,10 @@ function updatePrice(input) {
   window.onload = carttotal;
 
 
-
+// chuyển file
+document.getElementById('nut-thanh-toan').addEventListener('click', function() {
+  // Chuyển hướng qua trang "Thanhtoan.html"
+  window.location.href = '/Thanhtoan/Thanhtoan.html';})
 
  
 
